@@ -6,12 +6,11 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
 use frontend\assets\MaterialAsset;
-
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-AppAsset::register($this);
-//MaterialAsset::register($this);
+//AppAsset::register($this);
+MaterialAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -34,9 +33,15 @@ AppAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
+            
+            $report_mnu_itms[] = ['label' => 'ศาสนา', 'url' => ['report/index']];
+            $report_mnu_itms[] = ['label' => 'ประชากร', 'url' => ['pop/index']];
+             
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
+                ['label' => 'รายงานข้อมูลผลงาน',
+                    'items' => $report_mnu_itms
+                ],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
             if (Yii::$app->user->isGuest) {

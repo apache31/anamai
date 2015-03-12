@@ -1,9 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h1>View >> Test >> Index</h1>
+<h1>test/index</h1>
+ggggggggggggggggggggggggggggghhhhhh
 
-<p>
-    555555555555555555555555555
-</p>
-
+jjjjjjjjjj
